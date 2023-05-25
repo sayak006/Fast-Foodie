@@ -1,0 +1,416 @@
+/* css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* html{
+    scroll-behavior:smooth;
+} */
+/* css variables */
+:root{
+    --navbar-height:59px;
+}
+.mySlides {display: none}
+.slider_img{vertical-align: middle;
+    width: 100%;
+    height: 550px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width:100%;
+  position: relative;
+  margin: auto;
+  z-index: -1;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  
+}
+ @keyframes fade {
+  /* from {opacity: .4} 
+  to {opacity: 1} */
+  
+} 
+
+/* On smaller screens, decrease text size */
+/* @media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+} */
+
+/*Navigation bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    height: 90px;
+}
+
+/* Navigation bar: logo and image*/
+#logo{
+    margin: 8px 20px;
+}
+#logo img{
+    width: 70px;
+    height: 70px;
+}
+#tagname{
+    margin: 8px 20px 8px;
+}
+#tagname  h2{
+    font-size: 30px;
+    color: white;
+    font-family: 'Alkatra';
+}
+#fast{
+    color: crimson;
+}
+#foodie{
+    color: coral;
+}
+
+/* Navigation bar: list styling*/
+/* #navbar{
+    position: relative;
+} */
+#menu{
+    margin: 8px 20px 8px 244px;
+}
+.search{
+    margin: 8px 20px 8px 168px;
+}
+#search-box{
+    font-size: 22px;
+    border-radius: 20px;
+    padding: 3px 4px 3px 13px;
+}
+/* .switch{
+    margin:8px 20px 8px;
+} */
+/* .switch a{
+    font-size: 17px;
+    border-radius: 6px;
+    padding: 9px 4px 9px 4px;
+    background-color: rgb(231 127 8);
+    color: black;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+} */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color: #1e1818;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 23px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Alkatra', cursive;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/*Home Section*/
+#home{
+    display: flex;
+    flex-direction: column;
+    margin: 296px;
+    padding: 3px 196px;
+    height: 62px;
+    justify-content: center;
+    align-items: center;
+}
+/* #home::before{
+    content: "";
+    background:url('https://source.unsplash.com/random/?fastfood') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 750px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.70;
+} */
+#home h1{
+    color: white;
+    text-align: center;
+    margin-top: -128px;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Alkatra', cursive;
+}
+/*Services section*/
+#services-container{
+    text-align: center;
+    margin: 10px;
+    background-color: #f2f2f2;
+}
+#services{
+    margin:34px;
+    display: flex;
+}
+#services .box{
+    padding: 34px;
+    margin: 3px 50px;
+    border-radius: 28px;
+    background: #f2f2f2;
+}
+#services .box img{
+    /* height: 160px; */
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    transition-duration:0.15;
+    transition-timing-function: ease-in-out;
+}
+
+#services .box p{
+    font-family: 'Alkatra', cursive;
+}
+
+
+/*Catagories section*/
+#catagories-container{
+    text-align: center;
+    margin: 10px;
+}
+#catagories{
+    margin:34px;
+    display: flex;
+}
+#catagories .box{
+    border: 2px solid brown;
+    padding: 60px 81px 0px 81px;
+    margin: 3px 50px;
+    border-radius: 28px;
+    background: #f2f2f2;
+}
+#catagories .box img{
+    /* height: 160px; */
+    display: block;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    transition-duration:0.15;
+    transition-timing-function: ease-in-out;
+}
+#catagories .box img:hover{
+    height: 350px;
+    width: 350px;
+    cursor: pointer;
+    box-shadow: 2px 2px 20px 10px rgba(187, 185, 185, 0.7);
+}
+
+
+/*client section*/
+#client-section{
+    margin-top: 40px;
+    background-color: #f2f2f2;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+#clients img{
+    height: 150px;
+}
+.client-item{
+    padding: 50px;
+}
+/*Contact section*/
+#contact{
+    position: relative;
+    margin-top: 45px;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background: url('https://source.unsplash.com/random/?mobile') no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 34px;
+}
+#contact-box input,#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*footer section*/
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    text-align: center;
+}
+
+/*utility classes*/
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgba(128, 128, 128, 0.534);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    border-color: black;
+}

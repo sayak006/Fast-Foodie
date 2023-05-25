@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&family=Comfortaa:wght@500&family=Roboto:wght@500&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style2.css" />
+
+</head>
+<body>
+    <header>
+            <nav id="navbar">
+                <div id="logo">
+        <img src="static/logo-removebg-preview.png" alt="MyOnlineMeal.com" />
+    </div>
+    <div id="tagname">
+        <h2><span id="fast">Fast</span> & <span id="foodie">Foodie</span></h2>
+    </div>
+    <div id="menu">
+        <ul>
+        <li class="item"><a href="/login_index">Home</a></li>
+        <li class="item"><a href="#services-container">Services</a></li>
+        <li class="item"><a href="#client-section">Clients</a></li>
+        <li class="item"><a href="#contact-box">Contact us</a></li>
+    </ul>
+    </div>
+    <div class="search">
+        <input type="search" id="search-box" placeholder="search">
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">{{userName}}</button>
+        <div class="dropdown-content">
+          <a href="/logout">Logout</a>
+      </div>
+    </div> 
+</div>
+            </nav>
+        </header>
+
+    <div class="app-container">
+        <div class="app-bg">
+            <div class="left-side"></div>
+            <div class="right-side"></div>
+        </div>
+    <div class="products-list">
+        <div class="products">
+            <!-- render porducts here -->
+        </div>
+        <div class="cart">
+            <div class="shopping-bag">
+                <a href="./cart.html">
+                    <img src="static/bag.png" alt="cart">
+                    Cart
+                    <div class="total-items-in-cart">
+                        0
+                    </div>
+                </a>
+            </div>
+            <div class="cart-header">
+                <div class="column1">Item</div>
+                <div class="column2">Unit price</div>
+                <div class="column3">Units</div>
+            </div>
+            <div class="cart-items">
+                <!-- render cart items here -->
+            </div>
+            <div class="cart-footer">
+                <div class="subtotal">
+                    Subtotal (0 items): $0
+                </div>
+                <div class="checkout">
+                    Proceed to checkout
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    //fast & foodie
+    const fast=document.querySelector('#fast')
+    const foodie=document.querySelector('#foodie')
+    const tagname=document.querySelector('#tagname')
+
+    tagname.onmouseover = function(event) {
+        fast.style.color = 'coral';
+        foodie.style.color = 'crimson';
+    };
+
+    tagname.onmouseout = function(event) {
+        fast.style.color = 'crimson';
+        foodie.style.color='coral';
+    };
+    </script>
+    <script src="static/products.js"></script>
+    <script src="static/app.js"></script>
+</body>
+</html>

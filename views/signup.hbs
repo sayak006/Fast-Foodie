@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&family=Comfortaa:wght@500&family=Roboto:wght@500&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    {{!-- <link rel="stylesheet" href="static/style.css"> --}}
+    <style>
+        /* css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Navigation bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    height: 90px;
+}
+
+/* Navigation bar: logo and image*/
+#logo{
+    margin: 8px 20px;
+}
+#logo img{
+    width: 70px;
+    height: 70px;
+}
+#tagname{
+    margin: 8px 20px 8px;
+}
+#tagname  h2{
+    font-size: 30px;
+    color: white;
+    font-family: 'Alkatra';
+}
+#fast{
+    color: crimson;
+}
+#foodie{
+    color: coral;
+}
+
+/* Navigation bar: list styling*/
+/* #navbar{
+    position: relative;
+} */
+#menu{
+    margin: 8px 20px 8px 338px;
+}
+.search{
+    margin: 8px 20px 8px 168px;
+}
+#search-box{
+    font-size: 22px;
+    border-radius: 20px;
+    padding: 3px 4px 3px 13px;
+}
+/* .switch{
+    margin:8px 20px 8px;
+} */
+/* .switch a{
+    font-size: 17px;
+    border-radius: 6px;
+    padding: 9px 4px 9px 4px;
+    background-color: rgb(231 127 8);
+    color: black;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+} */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    
+}
+#navbar{
+    background-color: #1e1818;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 90px;
+    width: 100%;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 23px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Alkatra', cursive;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.signup::before{
+    content: "";
+    background:url('https://source.unsplash.com/random/?fastfood') no-repeat center center/cover;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    height:786px;
+    width: 100%;
+    z-index: -1;
+}
+.signup{
+    border: 2px solid black;
+    height: 562px;
+    width: 927px;
+    display: block;
+    margin: 200px 0px 0px 421px;
+    background-color: rgba(255, 252, 252, 0.7);
+    border-radius: 50px;
+    opacity: 1;
+}
+.signup_heading h1{
+    font-size: 50px;
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    color: #000000;
+    font-weight: bolder;
+}
+.form_group{
+    margin-top: 10px;
+    display: flex;
+}
+#form_grp1{
+    margin: 66px 80px 2px 47px;
+
+}
+#form_grp2{
+    margin: 66px 2px 2px -17px;
+
+}
+.label{
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: bolder;
+}
+.form_group input{
+    display: block;
+    width: 372px;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 0px 0px 16px 10px;
+    padding: 5px 3px 5px 9px;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #000000;
+    border-radius: 50px;
+}
+#submit{
+    margin-top: 38px;
+    background-color: #0491aa;
+    font-weight: bolder;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+<nav id="navbar">
+      <div id="logo">
+        <img src="static/logo-removebg-preview.png" alt="MyOnlineMeal.com" />
+      </div>
+      <div id="tagname">
+        <h2><span id="fast">Fast</span> & <span id="foodie">Foodie</span></h2>
+      </div>
+      <div id="menu">
+        <ul>
+        <li class="item"><a href="/">Home</a></li>
+        <li class="item"><a href="#services-container">Services</a></li>
+        <li class="item"><a href="#client-section">Clients</a></li>
+        <li class="item"><a href="#contact-box">Contact us</a></li>
+      </ul>
+      </div>
+      <div class="search">
+        <input type="search" id="search-box" placeholder="search">
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Login/Signup</button>
+        <div class="dropdown-content">
+          <a href="/signup">Signup</a>
+          <a href="/login">Login</a>
+      </div> 
+  </div>
+    </nav>
+    <div class="signup">
+        <div class="signup_heading">
+            <h1>Signup</h1>
+            <hr>
+        </div>
+        <form name="form" action="/signup" method="post" id="form">
+            <div class="form_group">
+                <div id="form_grp1">
+                    <label class="label">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name*" />
+                    <label class="label">Address</label>
+                    <input type="text" name="address" id="address" placeholder="Enter your address*" />
+                    <label class="label">Pincode</label>
+                    <input type="text" name="pincode" id="pincode" placeholder="Enter your pincode*" />
+                    <label class="label">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email id*" />
+                </div>
+                <div id="form_grp2">
+                    <label class="label">Phone</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter your phone number*" />
+                    <label class="label">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password*" />
+                    <label class="label">Confirm password</label>
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Enter your confirm password*" />
+                    <input type="submit" id="submit" value="signup">
+                </div>
+                
+                <!-- <input type="number" name="phone" id="phone" placeholder="Enter your phone number" /> -->
+                
+            </div>
+        </form>
+    </div>  
+</body>
+<script>
+    //fast & foodie
+const fast=document.querySelector('#fast')
+const foodie=document.querySelector('#foodie')
+const tagname=document.querySelector('#tagname')
+
+tagname.onmouseover = function(event) {
+  fast.style.color = 'coral';
+  foodie.style.color = 'crimson';
+};
+
+tagname.onmouseout = function(event) {
+  fast.style.color = 'crimson';
+  foodie.style.color='coral';
+};
+</script>
+</html>

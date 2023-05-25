@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Food Delivery Services | MyOnlineMeal.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&family=Comfortaa:wght@500&family=Roboto:wght@500&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:1400px)"
+      href="static/phone.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="static/Webalys-Kameleon.pics-Food-Dome.512.png"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <img src="static/logo-removebg-preview.png" alt="MyOnlineMeal.com" />
+      </div>
+      <div id="tagname">
+        <h2><span id="fast">Fast</span> & <span id="foodie">Foodie</span></h2>
+      </div>
+      <div id="menu">
+        <ul>
+        <li class="item"><a href="/login_index">Home</a></li>
+        <li class="item"><a href="#services-container">Services</a></li>
+        <li class="item"><a href="#catagories-container">Catagories</a></li>
+        <li class="item"><a href="#client-section">Clients</a></li>
+        <li class="item"><a href="#contact-box">Contact us</a></li>
+      </ul>
+      </div>
+      <div class="search">
+        <input type="search" id="search-box" placeholder="search">
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">{{userName}}</button>
+        <div class="dropdown-content">
+          <a href="/logout">Logout</a>
+      </div> 
+  </div>
+    </nav>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <!-- <div class="numbertext">1 / 3</div> -->
+        <img class="slider_img" src="static/pexels-kristina-paukshtite-1146760.jpg" >
+        <!-- <div class="text">Caption Text</div> -->
+      </div>
+
+      <div class="mySlides fade">
+        <img class="slider_img" src="static/pexels-johnny-rizk-2987564.jpg" >
+      </div>
+
+    <div class="mySlides fade">
+        <img class="slider_img" src="static/pexels-meraj-kazi-11299734.jpg" >
+      </div>    
+
+     <div class="mySlides fade">
+        <img class="slider_img" src="static/pexels-narda-yescas-1566837.jpg" >
+      </div>
+
+    <div class="mySlides fade">
+        <img class="slider_img" src="static/pexels-robin-stickel-70497.jpg" >
+      </div>
+
+    <div class="mySlides fade">
+        <img class="slider_img" src="static/pexels-angelo-greñas-10813356.jpg" >
+      </div>
+      
+      <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a> -->
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span> 
+      </div>
+    <!-- <section id="home">
+      <h1 class="h-primary">Welcome to MyOnlineMeal</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, porro
+        distinctio. Sit facere, adipisci dolorum odit, iure animi fugiat maxime
+      </p>
+      <button class="btn">Order Now</button>
+    </section> -->
+
+
+    <section id="services-container">
+      <h1 class="h-primary">Our Services</h1>
+      <div id="services">
+        <div class="box">
+          <img src="static/economic-order-quantity-featured-image-01.jpg" alt="" />
+          <h2 class="h-secondary">No Minimum Order</h2>
+          <p class="center">
+            Order in for yourself or for the group, with no restrictions on order value
+          </p>
+        </div>
+        <div class="box">
+          <img
+            src="static/banner-image-order-tracking.jpg"
+            alt=""
+          />
+          <h2 class="h-secondary">Live Order Tracking</h2>
+          <p>
+            Know where your order is at all times, from the restaurant to your doorstep
+          </p>
+        </div>
+        <div class="box">
+          <img
+            src="static/fast-delivery-courier-with-lightning-box_698903-4391.jpg"
+            alt=""
+          />
+          <h2 class="h-secondary">Lightning-Fast Delivery</h2>
+          <p>
+            Experience Fast&Foodie's superfast delivery for food delivered fresh & on time
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="catagories-container">
+      <h1 class="h-primary">Catagories</h1>
+      <div id="catagories">
+        <div class="box">
+          <a href="/login_pizza"><img src="https://source.unsplash.com/random/200x200/?pizza" 
+          alt="" /></a>
+          <h2 class="h-secondary">PIZZAS</h2>
+        </div>
+        <div class="box">
+          <a href="/login_burger"><img
+            src="https://source.unsplash.com/random/200x200/?burger"
+            alt=""
+          /></a>
+          <h2 class="h-secondary">BURGERS</h2>
+        </div>
+        <div class="box">
+          <a href="/login_chicken"><img
+            src="https://source.unsplash.com/random/200x200/?fried-chicken"
+            alt=""
+          /></a>
+          <h2 class="h-secondary">FIRED CHICKENS</h2>
+        </div>
+      </div>
+    </section>
+
+<section id="catagories-container">
+      <h1 class="h-primary">Newly Launched</h1>
+      <div id="catagories">
+        <div class="box">
+          <a href="#"><img src="static/Pepper_Barbeque_&_Onion.jpg" 
+          alt="" /></a>
+          <h2 class="h-secondary">Pepper Barbeque & Onion</h2>
+        </div>
+        <div class="box">
+          <a href="#"><img
+            src="static/Green-Chilli-Chicken-Kebab-Naan.jpg"
+            alt=""
+          /></a>
+          <h2 class="h-secondary">Green Chilli Chicken Kebab Naan</h2>
+        </div>
+        <div class="box">
+          <a href="#"><img
+            src="static/D-K009.jpg"
+            alt=""
+          /></a>
+          <h2 class="h-secondary">8 pc Hot & Crispy Chicken</h2>
+        </div>
+      </div>
+    </section>
+
+
+<section id="catagories-container">
+      <h1 class="h-primary">Top Selling</h1>
+      <div id="catagories">
+        <div class="box">
+          <a href="#"><img src="static/Pepper_Barbeque_&_Onion.jpg" 
+          alt="" /></a>
+          <h2 class="h-secondary">Pepper Barbeque & Onion</h2>
+        </div>
+        <div class="box">
+          <a href="#"><img
+            src="static/American-Chesse-Supreme-VEG-Burger.png"
+            alt=""
+          /></a>
+          <h2 class="h-secondary">American Chesse Supreme VEG Burger</h2>
+        </div>
+        <div class="box">
+          <a href="#"><img
+            src="static/D-PR00002169.jpg"
+            alt=""
+          /></a>
+          <h2 class="h-secondary">Stay Home Bucket</h2>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="client-section">
+      <h1 class="h-primary">Our Clients</h1>
+      <div id="clients">
+        <div class="client-item">
+          <img src="static/dominos.png" />
+        </div>
+        <div class="client-item">
+          <img src="static/kfc.png" />
+        </div>
+        <div class="client-item">
+          <img src="static/pizzahut.png" />
+        </div>
+        <div class="client-item">
+          <img src="static/mcdonald.png" />
+        </div>
+        <div class="client-item">
+          <img src="static/burgerking.png" />
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h1 class="h-primary">Contact us</h1>
+      <div id="contact-box">
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Email: </label>
+            <input
+              type="text"
+              name="name"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Phone: </label>
+            <input
+              type="text"
+              name="name"
+              id="phone"
+              placeholder="Enter your phone"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Message </label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="center">
+        Copyright &copy; www.MyOnlineMeal.com. All rights reserved!
+      </div>
+    </footer>
+    <script src="static/script.js"></script>
+  </body>
+</html>

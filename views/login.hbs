@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&family=Comfortaa:wght@500&family=Roboto:wght@500&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    {{!-- <link rel="stylesheet" href="static/style.css"> --}}
+    <style>
+        /* css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Navigation bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    height: 90px;
+}
+
+/* Navigation bar: logo and image*/
+#logo{
+    margin: 8px 20px;
+}
+#logo img{
+    width: 70px;
+    height: 70px;
+}
+#tagname{
+    margin: 8px 20px 8px;
+}
+#tagname  h2{
+    font-size: 30px;
+    color: white;
+    font-family: 'Alkatra';
+}
+#fast{
+    color: crimson;
+}
+#foodie{
+    color: coral;
+}
+
+/* Navigation bar: list styling*/
+/* #navbar{
+    position: relative;
+} */
+#menu{
+    margin: 8px 20px 8px 338px;
+}
+.search{
+    margin: 8px 20px 8px 168px;
+}
+#search-box{
+    font-size: 22px;
+    border-radius: 20px;
+    padding: 3px 4px 3px 13px;
+}
+/* .switch{
+    margin:8px 20px 8px;
+} */
+/* .switch a{
+    font-size: 17px;
+    border-radius: 6px;
+    padding: 9px 4px 9px 4px;
+    background-color: rgb(231 127 8);
+    color: black;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+} */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+}
+#navbar{
+    background-color: #1e1818;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 90px;
+    width: 100%;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 23px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Alkatra', cursive;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.login::before{
+    content: "";
+    background:url('https://source.unsplash.com/random/?fastfood') no-repeat center center/cover;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    height:786px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+.login{
+    height: 500px;
+    width: 400px;
+    display: block;
+    margin: 235px 0px 0px 700px;
+    background-color: rgba(255, 252, 252, 0.4);
+    border-radius: 50px;
+    opacity: 1;
+    
+}
+
+.login_heading h1{
+    font-size: 50px;
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    color: #000000;
+    font-weight: bolder;
+}
+.form_group{
+    margin-top: 38px;
+}
+.label{
+    margin-left: 20px;
+    font-size: 25px;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: bolder;
+}
+.form_group input{
+    display: block;
+    width: 372px;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 20px 0px 56px 10px;
+    padding: 5px 9px 5px 9px;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #000000;
+    border-radius: 50px;
+}
+#submit{
+    background-color: #0491aa;
+    font-weight: bolder;
+    color: white;
+}
+    </style>
+</head>
+<body>
+<nav id="navbar">
+      <div id="logo">
+        <img src="static/logo-removebg-preview.png" alt="MyOnlineMeal.com" />
+      </div>
+      <div id="tagname">
+        <h2><span id="fast">Fast</span> & <span id="foodie">Foodie</span></h2>
+      </div>
+      <div id="menu">
+        <ul>
+        <li class="item"><a href="/">Home</a></li>
+        <li class="item"><a href="#services-container">Services</a></li>
+        <li class="item"><a href="#client-section">Clients</a></li>
+        <li class="item"><a href="#contact-box">Contact us</a></li>
+      </ul>
+      </div>
+      <div class="search">
+        <input type="search" id="search-box" placeholder="search">
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Login/Signup</button>
+        <div class="dropdown-content">
+          <a href="/signup">Signup</a>
+          <a href="/login">Login</a>
+      </div> 
+  </div>
+    </nav>
+    <div class="login">
+        <div class="login_heading">
+            <h1>LOGIN</h1>
+            <hr>
+        </div>
+        <form name="form" action="/login" method="post" id="form">
+            <div class="form_group">
+                <label class="label">EMAIL</label>
+                <input type="email" name="email" id="email" />
+                <label class="label">PASSWORD</label>
+                <input type="password" name="password" id="password" />
+                <input type="submit" id="submit" value="Login">
+            </div>
+        </form>
+    </div>  
+</body>
+<script>
+    //fast & foodie
+const fast=document.querySelector('#fast')
+const foodie=document.querySelector('#foodie')
+const tagname=document.querySelector('#tagname')
+
+tagname.onmouseover = function(event) {
+  fast.style.color = 'coral';
+  foodie.style.color = 'crimson';
+};
+
+tagname.onmouseout = function(event) {
+  fast.style.color = 'crimson';
+  foodie.style.color='coral';
+};
+</script>
+</html>
